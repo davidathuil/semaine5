@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Carte de visiste</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Script -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Point de montage-->
+    <div id="root">
+        <table>
+        <thead>
+        <tr>
+            <th></th>
+            <th>Brut</th>
+            <th>Net</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Annuel</td>
+            <td> <label for="salireBrutInput">salaire annuel:</label>
+                <input
+                  id="salireBrutInput"
+                  name="salireBrutInput"
+                  @input="inputBrut"
+                  :value="salireBrut"
+                />
+            </td>
+            <td>{{outputNet}}€</td>
+
+        </tr>
+        <tr>
+            <td>Mensuel</td>
+            <td> {{BrutMonth}}€ </td>
+            <td>{{outputNetMonth}}€</td>
+        </tr>
+    </tbody>  
+</table>
+<label for="cadre">Cadre</label>
+<input  type="checkbox" 
+        name="cadre"
+        id="cadre"
+
+        @input="changecoef"
+        
+        />      
+    </div>
+      
+  </body>
+</html>

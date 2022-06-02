@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>atelier VUE 21</title>
+</head>
+<body>
+    <div id ="root">
+            <p :class="titleClass">{{prenom}}{{nom}} </p>
+            <p :style="'background-color:' + couleur">{{tel}} </p>
+            <p :class="titleClass2">{{poste}} </p>
+            <button @click="say()" id ="change">change de couleur poste</button>
+            <input @input="sayprenom" placeholder=" mettre prenom">
+            <!-- <input @input="saynom" placeholder=" mettre nom">
+            <input @input="saytel" placeholder=" mettre prenom">
+            <input @input="sayprenom" placeholder=" mettre prenom"> -->
+            <input v-model="nom" placeholder=" mettre nom">
+            <input v-model="tel" placeholder=" mettre tel">
+            <input v-model="tel" placeholder=" mettre tel">
+            <input v-model="couleur" placeholder=" mettre nom">
+            
+    
+    </div>
+</body>
+</html>
+<!-- <button @click="say(this.prenom)" id ="change">change de couleur poste</button> -->
